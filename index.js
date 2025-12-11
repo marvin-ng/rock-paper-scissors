@@ -1,22 +1,24 @@
 function getComputerChoice(max) {
-    const choice = Math.floor(Math.random() * max);
+    const choice = Math.floor(Math.random() * 3);
     if (choice === 0) {
-        return "rock";
+        return "Computer chose rock";
     }
     else if (choice === 1) {
-        return "paper";
+        return "Computer chose paper";
     }
     else if (choice === 2) {
-        return "scissors"
+        return "Computer chose scissors"
     }
     return choice;
 
 }
 
-/// computer choice code - console.log (getComputerChoice(3))
+/// computer choice code - console.log ("computer chose" + getComputerChoice(3))
 
 function getHumanChoice() {
     const humanChoice = prompt("What do you choose? rock, paper, scissors");
-    const answer = humanChoice ()
+    if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+        console.log ("you chose" +" "+ humanChoice);
+    }
 
 }
