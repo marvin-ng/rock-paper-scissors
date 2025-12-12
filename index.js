@@ -49,7 +49,7 @@ function playRound(humanChoice2, computerChoice) {
   }
 }
 
-const humanChoice2 = getHumanChoice;
-const computerChoice = getComputerChoice;
+const humanChoice2 = getHumanChoice();
+const computerChoice = getComputerChoice(3);
 
 console.log(playRound(humanChoice2, computerChoice));
