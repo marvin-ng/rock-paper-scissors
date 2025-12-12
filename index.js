@@ -5,11 +5,11 @@ let computerScore = 0;
 function getComputerChoice(max) {
   const choice = Math.floor(Math.random() * max);
   if (choice === 0) {
-    return "Computer chose rock";
+    return "rock";
   } else if (choice === 1) {
-    return "Computer chose paper";
+    return "paper";
   } else if (choice === 2) {
-    return "Computer chose scissors";
+    return "scissors";
   }
   return choice;
 }
@@ -23,7 +23,7 @@ function getHumanChoice() {
     humanChoice === "paper" ||
     humanChoice === "scissors"
   ) {
-    console.log("you chose" + " " + humanChoice);
+    return humanChoice;
   }
 }
 
@@ -41,9 +41,9 @@ function playRound(humanChoice2, computerChoice) {
   } else if (humanChoice2 === "scissors" && computerChoice === "scissors") {
     console.log("Tie!!");
   } else if (humanChoice2 === "paper" && computerChoice === "rock") {
-    console.log("You win!");
+    console.log("You win! paper beats rock");
   } else if (humanChoice2 === "paper" && computerChoice === "scissors") {
-    console.log("You lose!");
+    console.log("You lose! scissors beats paper");
   } else if (humanChoice2 === "paper" && computerChoice === "paper") {
     console.log("Tie!");
   }
